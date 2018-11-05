@@ -35,7 +35,11 @@ public class PetClinicApplication {
 }
 /*
  * CTEST
- PIZDA
- ALLAH AKBAR
- HESOYAM
+98aca70783faa66388d05cc514672c887405d3ff Sonar tocken
  */
+ docker run -d --name sonar \
+    -p 9000:9000 -p 9092:9092 \
+    -e SONARQUBE_JDBC_USERNAME=sonar \
+    -e SONARQUBE_JDBC_PASSWORD=sonar \
+    -e SONARQUBE_JDBC_URL=jdbc:postgresql://localhost/sonar \
+    sonarqube
